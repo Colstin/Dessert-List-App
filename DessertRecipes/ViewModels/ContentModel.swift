@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ContentModel: ObservableObject{
     
     init() {
-        
+        getRecipe()
     }
     
     // MARK: TheMealDB API Methods
@@ -35,7 +36,7 @@ class ContentModel: ObservableObject{
             
             // Check there's no error
             if error == nil {
-                print(response!)
+                print(response as Any)
             }
             
         }
