@@ -46,12 +46,6 @@ class ContentModel: ObservableObject{
                     let result = try decoder.decode(DessertSearch.self, from: data!)
                     //print(result)
                     
-                    // Call the getImage function of the Dessert
-                   // for d in result.meals{
-                   //     d.getImageData()
-                  //  }
-                         
-                    
                     DispatchQueue.main.async {
                         self.desserts = result.meals
                     }

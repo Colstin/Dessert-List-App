@@ -16,22 +16,20 @@ struct DessertListView: View {
         if contentModel.desserts.count != 0 { // TODO: change to !=
             NavigationStack{
                 ScrollView{
-                    LazyVStack(alignment: .leading){
-                        ForEach(contentModel.desserts){ dessert in
-                           
+                    ForEach(contentModel.desserts){ dessert in
+                       
+                        NavigationLink {
+                            DessertDetailView()
+                        } label: {
                             DessertListRow(dessert: dessert)
                         }
                     }
-                   
-
                 }
                 .navigationTitle("Dessert Recipes")
                 .navigationBarTitleDisplayMode(.inline)
                 .padding()
-                
             }
             
-
         } else {
             ProgressView()
         }

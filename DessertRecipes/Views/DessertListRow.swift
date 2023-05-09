@@ -9,32 +9,33 @@ import SwiftUI
 
 struct DessertListRow: View {
     
-    @ObservedObject var dessert:Dessert
+    var dessert: Dessert
     
     var body: some View {
-        HStack{
-            //Image
-//            AsyncImage(url: URL(string: dessert.strMealThumb!))
-//                .frame(width: 58, height: 58)
-//                .cornerRadius(15)
-            
-            AsyncImage(url: URL(string: dessert.strMealThumb!)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 58, height: 58)
-                    .cornerRadius(15)
-            } placeholder: {
-                Color.red
-            }
-            .frame(width: 58, height: 58)
-            .clipShape(RoundedRectangle(cornerRadius: 25))
+        LazyVStack(alignment: .leading) {
+            HStack{
+                //Image
+                AsyncImage(url: URL(string: dessert.strMealThumb!)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 58, height: 58)
+                        .cornerRadius(15)
+                } placeholder: {
+                    Color.red
+                }
+                .frame(width: 58, height: 58)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
 
+                
+                //Title
+                Text(dessert.strMeal ?? "")
+                
+            }
+            .foregroundColor(.black)
             
-            //Title
-            Text(dessert.strMeal ?? "")
-            
+            Divider()
         }
-        Divider()
+       
     }
 }
 
