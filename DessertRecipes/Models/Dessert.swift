@@ -12,4 +12,5 @@ class Dessert: ObservableObject, Decodable, Identifiable {
     var strMeal: String?
     var strMealThumb: String?
     var idMeal: String?
+    
 }

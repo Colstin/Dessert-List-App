@@ -10,6 +10,9 @@ import SwiftUI
 
 class ContentModel: ObservableObject{
     
+    @Published var desserts = [Dessert]()
+    
+    
     init() {
         getRecipe()
     }
@@ -19,7 +22,7 @@ class ContentModel: ObservableObject{
     func getRecipe() {
         
         // API URL
-        let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")
+        let url = URL(string: Constants.apiDessertUrl)
         
         guard url != nil else {
             print("not able to find URL Data")
@@ -36,7 +39,22 @@ class ContentModel: ObservableObject{
             
             // Check there's no error
             if error == nil {
-                print(response as Any)
+                //print(response as Any)
+                
+                do{
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(DessertSearch.self, from: data!)
+                    //print(result)
+                    
+                    DispatchQueue.main.async {
+                        self.desserts = result.meals
+                    }
+                    
+                } catch {
+                    print(error)
+                }
+                
+                
             }
             
         }

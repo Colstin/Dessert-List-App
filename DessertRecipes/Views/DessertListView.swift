@@ -12,15 +12,30 @@ struct DessertListView: View {
     @EnvironmentObject var contentModel: ContentModel
     
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                NavigationLink {
-                    DessertDetailView()
-                } label: {
-                    Text("Go to View")
-                }
+        
+        if contentModel.desserts.count != 0 { // TODO: change to !=
+            NavigationStack{
+                ScrollView{
+                    LazyVStack(alignment: .leading){
+                        ForEach(contentModel.desserts){ dessert in
+                            HStack{
+                                Text(dessert.strMeal ?? "")
 
+                            }
+                            Divider()
+                        }
+                    }
+                   
+
+                }
+                .navigationTitle("Dessert Recipes")
+                .navigationBarTitleDisplayMode(.inline)
+                
             }
+            
+
+        } else {
+            ProgressView()
         }
     }
 }
