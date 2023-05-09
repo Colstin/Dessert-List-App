@@ -17,6 +17,8 @@
 		D64813962A099EE700CC7D62 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813952A099EE700CC7D62 /* Dessert.swift */; };
 		D64813982A0AC2A800CC7D62 /* DessertSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813972A0AC2A800CC7D62 /* DessertSearch.swift */; };
 		D648139A2A0ACFCC00CC7D62 /* DessertListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813992A0ACFCC00CC7D62 /* DessertListRow.swift */; };
+		D648139C2A0AF52100CC7D62 /* DessertDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648139B2A0AF52100CC7D62 /* DessertDetail.swift */; };
+		D648139E2A0AFA9400CC7D62 /* DessertDetailsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648139D2A0AFA9400CC7D62 /* DessertDetailsSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D64813952A099EE700CC7D62 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
 		D64813972A0AC2A800CC7D62 /* DessertSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertSearch.swift; sourceTree = "<group>"; };
 		D64813992A0ACFCC00CC7D62 /* DessertListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListRow.swift; sourceTree = "<group>"; };
+		D648139B2A0AF52100CC7D62 /* DessertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetail.swift; sourceTree = "<group>"; };
+		D648139D2A0AFA9400CC7D62 /* DessertDetailsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				D64813952A099EE700CC7D62 /* Dessert.swift */,
 				D64813972A0AC2A800CC7D62 /* DessertSearch.swift */,
+				D648139B2A0AF52100CC7D62 /* DessertDetail.swift */,
+				D648139D2A0AFA9400CC7D62 /* DessertDetailsSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64813802A0834F700CC7D62 /* DessertListView.swift in Sources */,
+				D648139C2A0AF52100CC7D62 /* DessertDetail.swift in Sources */,
 				D648137E2A0834F700CC7D62 /* DessertRecipesApp.swift in Sources */,
+				D648139E2A0AFA9400CC7D62 /* DessertDetailsSearch.swift in Sources */,
 				D64813942A084A8E00CC7D62 /* DessertDetailView.swift in Sources */,
 				D64813982A0AC2A800CC7D62 /* DessertSearch.swift in Sources */,
 				D64813902A0836F100CC7D62 /* ContentModel.swift in Sources */,

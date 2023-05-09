@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct DessertDetailView: View {
+    
+    var dessert: Dessert
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("\(dessert.strMeal ?? "")")
+            Text("Instructions")
+            Text("Meaurments/ ingredients")
+        }
+    
     }
 }
-
+/*
 struct DessertDetailView_Previews: PreviewProvider {
     static var previews: some View {
         DessertDetailView()
     }
 }
+*/

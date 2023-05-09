@@ -14,7 +14,8 @@ class ContentModel: ObservableObject{
     
     
     init() {
-        getRecipe()
+       // getRecipe()
+        getRecipeDetails()
     }
     
     // MARK: TheMealDB API Methods
@@ -62,4 +63,26 @@ class ContentModel: ObservableObject{
         dataTask.resume()
         
     }
+    
+    func getRecipeDetails(){ //mealId: String
+        let url = URL(string: "\(Constants.apiUrl)/lookup.php?i=53049")
+        
+        guard url != nil else {
+            print("not able to find URL Data")
+            return
+        }
+        
+        var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        
+        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if error == nil {
+                print(response as Any)
+            }
+            
+        }
+        dataTask.resume()
+    }
+    
 }
