@@ -18,11 +18,8 @@ struct DessertListView: View {
                 ScrollView{
                     LazyVStack(alignment: .leading){
                         ForEach(contentModel.desserts){ dessert in
-                            HStack{
-                                Text(dessert.strMeal ?? "")
-
-                            }
-                            Divider()
+                           
+                            DessertListRow(dessert: dessert)
                         }
                     }
                    
@@ -30,6 +27,7 @@ struct DessertListView: View {
                 }
                 .navigationTitle("Dessert Recipes")
                 .navigationBarTitleDisplayMode(.inline)
+                .padding()
                 
             }
             

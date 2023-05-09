@@ -9,12 +9,29 @@ import SwiftUI
 
 struct DessertListRow: View {
     
-    var dessert: [Dessert]
+    @ObservedObject var dessert:Dessert
     
     var body: some View {
         HStack{
-           //Image
-           Text("Business name")
+            //Image
+//            AsyncImage(url: URL(string: dessert.strMealThumb!))
+//                .frame(width: 58, height: 58)
+//                .cornerRadius(15)
+            
+            AsyncImage(url: URL(string: dessert.strMealThumb!)) { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 58, height: 58)
+                    .cornerRadius(15)
+            } placeholder: {
+                Color.red
+            }
+            .frame(width: 58, height: 58)
+            .clipShape(RoundedRectangle(cornerRadius: 25))
+
+            
+            //Title
+            Text(dessert.strMeal ?? "")
             
         }
         Divider()
