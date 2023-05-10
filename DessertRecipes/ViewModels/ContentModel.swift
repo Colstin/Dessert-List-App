@@ -13,7 +13,7 @@ class ContentModel: ObservableObject{
     @Published var desserts = [Dessert]()
     @Published var dessertsDetail = [DessertDetail]()
   
-    @Published var currentDessertId: DessertDetail?
+    @Published var currentDessertId = "53049"
  
     
     init() {
@@ -21,7 +21,7 @@ class ContentModel: ObservableObject{
         getRecipe()
         //getRecipeDetails(mealId: currentDessertId ?? "53049")
     
-        getRecipeDetails(mealId: currentDessertId?.idMeal ?? "53049")
+        getRecipeDetails(mealId: currentDessertId)
 
        
     }
