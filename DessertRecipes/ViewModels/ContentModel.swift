@@ -12,12 +12,18 @@ class ContentModel: ObservableObject{
     
     @Published var desserts = [Dessert]()
     @Published var dessertsDetail = [DessertDetail]()
-    @Published var currentDessertDetail: DessertDetail?
-    
+  
+    @Published var currentDessertId: DessertDetail?
+ 
     
     init() {
+       
         getRecipe()
-        getRecipeDetails()
+        //getRecipeDetails(mealId: currentDessertId ?? "53049")
+    
+        getRecipeDetails(mealId: currentDessertId?.idMeal ?? "53049")
+
+       
     }
     
     // MARK: TheMealDB API Methods
@@ -66,8 +72,8 @@ class ContentModel: ObservableObject{
         
     }
     
-    func getRecipeDetails(){ //mealId: String
-        let url = URL(string: "\(Constants.apiUrl)/lookup.php?i=53049")
+    func getRecipeDetails(mealId: String){
+        let url = URL(string: "\(Constants.apiUrl)/lookup.php?i=\(mealId)")
         
         guard url != nil else {
             print("not able to find URL Data")

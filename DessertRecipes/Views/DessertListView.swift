@@ -10,6 +10,8 @@ import SwiftUI
 struct DessertListView: View {
     
     @EnvironmentObject var contentModel: ContentModel
+    @State var currentDetailId: String?
+   
     
     var body: some View {
         
@@ -21,7 +23,10 @@ struct DessertListView: View {
                         ForEach(contentModel.dessertsDetail) { detail in
                             NavigationLink {
                                 DessertDetailView(dessertDetail: detail)
-                                
+                                    .onAppear(){
+                                        contentModel.getRecipeDetails(mealId: currentDetailId ?? "52893")
+                                    }
+                                  
                             } label: {
                                 DessertListRow(dessert: dessert)
                         }

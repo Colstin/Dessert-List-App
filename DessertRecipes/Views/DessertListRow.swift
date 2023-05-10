@@ -10,7 +10,7 @@ import SwiftUI
 struct DessertListRow: View {
     
     var dessert: Dessert
-    
+   
     var body: some View {
         LazyVStack(alignment: .leading) {
             HStack{
