@@ -35,6 +35,7 @@
 		D64813992A0ACFCC00CC7D62 /* DessertListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListRow.swift; sourceTree = "<group>"; };
 		D648139B2A0AF52100CC7D62 /* DessertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetail.swift; sourceTree = "<group>"; };
 		D648139D2A0AFA9400CC7D62 /* DessertDetailsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsSearch.swift; sourceTree = "<group>"; };
+		D64813A12A0B5C5400CC7D62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		D64813712A0834F700CC7D62 = {
 			isa = PBXGroup;
 			children = (
+				D64813A12A0B5C5400CC7D62 /* README.md */,
 				D648137C2A0834F700CC7D62 /* DessertRecipes */,
 				D648137B2A0834F700CC7D62 /* Products */,
 			);
