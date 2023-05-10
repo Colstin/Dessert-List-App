@@ -1,18 +1,18 @@
-#  Mustache Generator
+# Dessert Recipe App
 - - -
 ** Version 1.0.0 **
 
-- Mustache Generator App
-- My first Augmented Reality App that uses ARFaceTrackingConfiguration() in order to add my custom made reality composer images onto the face. The horizontal scroll bar allows the user to select different Mustaches as well as the option of no mustache. 
-- ARKit
+- Dessert Recipe App that allows you to search for recipes using themealdb.com API. It displays the desserts in a List view where upon clicking on the item brings you to a detail view in order to gather the recipes and instructions. 
+- Data is accessed through an API
+- MVVM architecture 
 
-### Different Mustaches
+### Dessert App Views
 <div align="center">
-<img width="200" alt="List View" title="List View" src="">
+<img width="300" alt="List View" title="List View" src="https://github.com/Colstin/Dessert-List-App/assets/96356901/8aeba139-761b-4da6-8755-3d69b3b87aa0">
 &nbsp;
 &nbsp;
 &nbsp;
-<img width="200" alt="Detail View" title="Detail View" src="">
+<img width="278" alt="Detail View" title="Detail View" src="https://github.com/Colstin/Dessert-List-App/assets/96356901/d3629c2b-b329-4b3e-908d-f5a9f234ea1c">
 </div>
 
 
