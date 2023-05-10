@@ -9,10 +9,8 @@ import SwiftUI
 
 struct DessertDetailView: View {
     
-    //var dessert: Dessert
     var dessertDetail: DessertDetail
-    //var contentModel: ContentModel
-    
+
     var body: some View {
         VStack{
             Text("How to Make:")
@@ -31,9 +29,8 @@ struct DessertDetailView: View {
                         .bold()
                     Text("\(dessertDetail.strInstructions ?? "")")
                     
-                    
+                    //MARK: INGREDIENTS
                     VStack(alignment: .leading){
-                        //MARK: INGREDIENTS
                         Text("Ingredients: ")
                             .font(.title2)
                             .padding(.bottom, 5)

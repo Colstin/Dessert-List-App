@@ -21,6 +21,7 @@ struct DessertListView: View {
                         ForEach(contentModel.dessertsDetail) { detail in
                             NavigationLink {
                                 DessertDetailView(dessertDetail: detail)
+                                
                             } label: {
                                 DessertListRow(dessert: dessert)
                         }
