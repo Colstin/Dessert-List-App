@@ -27,7 +27,8 @@ struct DessertListView: View {
                                         print(dessert.strMeal!)
                                         currentDessertId = dessert.idMeal!
                                         print(currentDessertId)
-                                        
+                                        print(contentModel.currentDessertId)
+                                     
                                     }                              
                                   
                             } label: {
