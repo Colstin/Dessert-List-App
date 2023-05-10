@@ -9,15 +9,52 @@ import SwiftUI
 
 struct DessertDetailView: View {
     
-    var dessert: Dessert
+    //var dessert: Dessert
+    var dessertDetail: DessertDetail
+    //var contentModel: ContentModel
     
     var body: some View {
         VStack{
-            Text("\(dessert.strMeal ?? "")")
-            Text("Instructions")
-            Text("Meaurments/ ingredients")
+            Text("How to Make:")
+                .font(.title2)
+                .bold()
+            Text("\(dessertDetail.strMeal ?? "")")
+                .italic()
+            Divider()
+            
+            ScrollView(showsIndicators: false){
+                VStack(alignment: .leading ){
+                    //MARK: INSTRUCTIONS
+                    Text("Instructions: ")
+                        .font(.title2)
+                        .padding(.bottom, 5)
+                        .bold()
+                    Text("\(dessertDetail.strInstructions ?? "")")
+                    
+                    
+                    VStack(alignment: .leading){
+                        //MARK: INGREDIENTS
+                        Text("Ingredients: ")
+                            .font(.title2)
+                            .padding(.bottom, 5)
+                            .bold()
+                        ForEach(0..<dessertDetail.ingredients.count, id: \.self){ index in
+                            if dessertDetail.ingredients[index]!.count < 1 {
+                               Text("")
+
+                            } else {
+                                VStack(alignment: .leading) {
+                                    Text("• \(dessertDetail.measurements[index] ?? "" ) \(dessertDetail.ingredients[index] ?? "") ")
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top)
+                }
+            }
         }
-    
+        .padding()
+        .background(.brown.opacity(0.1))
     }
 }
 /*

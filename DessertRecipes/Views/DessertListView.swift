@@ -18,10 +18,12 @@ struct DessertListView: View {
                 ScrollView{
                     ForEach(contentModel.desserts){ dessert in
                        
-                        NavigationLink {
-                            DessertDetailView(dessert: dessert)
-                        } label: {
-                            DessertListRow(dessert: dessert)
+                        ForEach(contentModel.dessertsDetail) { detail in
+                            NavigationLink {
+                                DessertDetailView(dessertDetail: detail)
+                            } label: {
+                                DessertListRow(dessert: dessert)
+                        }
                         }
                     }
                 }

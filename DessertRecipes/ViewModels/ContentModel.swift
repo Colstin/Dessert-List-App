@@ -11,10 +11,12 @@ import SwiftUI
 class ContentModel: ObservableObject{
     
     @Published var desserts = [Dessert]()
+    @Published var dessertsDetail = [DessertDetail]()
+    @Published var currentDessertDetail: DessertDetail?
     
     
     init() {
-       // getRecipe()
+        getRecipe()
         getRecipeDetails()
     }
     
@@ -78,9 +80,18 @@ class ContentModel: ObservableObject{
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if error == nil {
-                print(response as Any)
+                do{
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(DessertDetailsSearch.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        self.dessertsDetail = result.meals
+                    }
+                    
+                } catch{
+                    print(error)
+                }
             }
-            
         }
         dataTask.resume()
     }

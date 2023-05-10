@@ -24,7 +24,7 @@ struct DessertListRow: View {
                     Color.red
                 }
                 .frame(width: 58, height: 58)
-                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
 
                 
                 //Title
